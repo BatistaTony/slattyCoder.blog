@@ -1,8 +1,13 @@
 import React from 'react'
+import Search from '../Search'
 import HeroStyled from './styles'
 
 function Hero() {
-	return <HeroStyled>the hero</HeroStyled>
+	return (
+		<HeroStyled>
+			<Search />
+		</HeroStyled>
+	)
 }
 
 export default Hero
