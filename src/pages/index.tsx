@@ -1,11 +1,8 @@
-import PageLayout from "../layout";
+import React from 'react'
+import PageHome from '../pageComponents/Home'
 
-const Page = () => {
-    return (
-        <PageLayout>
-            <h1>Somthing here</h1>
-        </PageLayout>
-    )
-};
+function Page() {
+	return <PageHome />
+}
 
-export default Page;
+export default Page
