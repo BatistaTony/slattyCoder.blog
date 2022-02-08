@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { loadFont } from '../../styles/global-style'
 
 interface NavbarStyledProps {
 	isFixed?: boolean
@@ -26,5 +27,6 @@ export const Logo = styled.div`
 	h1 {
 		color: ${props => props.theme.colors.primaryText};
 		font-size: 1.2rem;
+		${loadFont({ font: 'Bold' })}
 	}
 `

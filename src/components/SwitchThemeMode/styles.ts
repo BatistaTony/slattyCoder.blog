@@ -1,18 +1,16 @@
 import styled from 'styled-components'
 
-
-
 export const SwitchThemeModeStyled = styled.div`
 	width: 60px;
 	height: auto;
-	background: green;
+	background: ${props => props.theme.colors.button};
 	padding: 3px;
 	border-radius: 20px;
-    cursor: pointer;
+	cursor: pointer;
 `
 
 interface SwitchCircleStyledProps {
-    isDark?:boolean
+	isDark?: boolean
 }
 
 export const SwitchCircleStyled = styled.div<SwitchCircleStyledProps>`
@@ -22,5 +20,5 @@ export const SwitchCircleStyled = styled.div<SwitchCircleStyledProps>`
 	border-radius: 20px;
 	transition: 0.5s;
 	transform: ${({ isDark }) =>
-		isDark ? `translateX(25px)` : 'translateX(0px)'};
+		isDark ? `translateX(26px)` : 'translateX(1px)'};
 `
