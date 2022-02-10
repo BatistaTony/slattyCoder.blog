@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { InputStyled } from './styles'
 
-const Input = () => {
-	return <InputStyled />
+export interface InputProps extends React.HTMLProps<HTMLInputElement> {}
+
+const Input: React.FC<InputProps> = ({ ...props }) => {
+	const inputRef = useRef<HTMLInputElement>(null)
+	return <InputStyled {...props} ref={inputRef} />
 }
 
 export default Input

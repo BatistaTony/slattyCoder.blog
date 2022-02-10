@@ -11,11 +11,7 @@ export function loadFont({ font }: LoadFontProps) {
         font-family: Poppins-${font};
     }
 
-            font-family: Poppins-${font};
-
-
-
-    
+    font-family: Poppins-${font};    
 `
 }
 

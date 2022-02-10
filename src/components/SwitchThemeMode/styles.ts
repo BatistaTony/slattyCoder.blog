@@ -32,7 +32,7 @@ export const ShadowCircleStyled = styled.div<SwitchCircleStyledProps>`
 	width: ${({ isDark }) => (isDark ? '75%' : '0')};
 	height: 20px;
 	position: absolute;
-	left: 1px;
+	left: 2px;
 	background: red;
 	border-radius: 20px;
 	z-index: 1;
