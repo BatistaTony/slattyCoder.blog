@@ -8,7 +8,9 @@ interface QuoteProps {
 const Quote = ({ text }: QuoteProps) => {
 	return (
 		<QuotedStyled>
-			<p>{text}</p>
+			<h1>
+				<span> {text}</span>
+			</h1>
 		</QuotedStyled>
 	)
 }

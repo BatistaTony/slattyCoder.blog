@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar } from '../components/Navbar'
 import { PageLayoutStyled } from './styles'
 import Head from 'next/head'
+import Footer from '../components/Footer'
 
 interface PageLayoutProps {
 	title: string
@@ -20,6 +21,7 @@ const PageLayout: React.FC = ({
 			<PageLayoutStyled>
 				<Navbar />
 				{children}
+				<Footer />
 			</PageLayoutStyled>
 		</>
 	)

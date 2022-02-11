@@ -5,5 +5,6 @@ export const defaultTheme = {
 		secondaryText: '#151515',
 		button: '#ECB365',
 		card: '#064663',
+		quoteBg: '#3e3a39',
 	},
 }
