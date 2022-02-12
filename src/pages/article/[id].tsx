@@ -8,10 +8,15 @@ import {
 import { articles } from '../../services/articles'
 import { ArticleType } from '../../types/article'
 import PageLayout from '../../layout'
+import Article from '../../pageComponents/Article'
 
 const ArticlePage = ({ article }) => {
 	console.log(article)
-	return <PageLayout>The Article Page</PageLayout>
+	return (
+		<PageLayout>
+			<Article />
+		</PageLayout>
+	)
 }
 
 export const getStaticPaths: GetStaticPaths =
@@ -38,7 +43,6 @@ export const getStaticProps: GetStaticProps = async ({
 	const data = articles.find(article => article.id === params.id)
 
 	data.created_at = `${data.created_at}`
-
 
 	return {
 		props: { article: data },
