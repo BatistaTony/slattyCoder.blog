@@ -8,10 +8,11 @@ export const ArticleCardStyled = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-	background: rgb(28 27 36);
+	background: ${props => props.theme.colors.card};
 	border-radius: 10px;
 	padding: 20px;
 	cursor: pointer;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 `
 
 export const ArticleHeader = styled.div`

@@ -23,13 +23,13 @@ export const QuotedStyled = styled.div`
 	}
 
 	h1 > span {
-		background: ${props => props.theme.colors.quoteBg};
+		background: ${props => props.theme.colors.card};
 		box-decoration-break: clone;
 		display: inline;
 		color: white;
 		line-height: 2;
-		box-shadow: ${props => `-10px 0px 0 7px ${props.theme.colors.quoteBg},
-			10px 0px 0 7px ${props.theme.colors.quoteBg}, 0 0 0 7px ${props.theme.colors.quoteBg} `};
+		box-shadow: ${props => `-10px 0px 0 7px ${props.theme.colors.card},
+			10px 0px 0 7px ${props.theme.colors.card}, 0 0 0 7px ${props.theme.colors.card} `};
 		box-decoration-break: clone;
 	}
 `
