@@ -7,7 +7,7 @@ interface LoadFontProps {
 export function loadFont({ font }: LoadFontProps) {
 	return `
     @font-face {
-        src: url("./fonts/Poppins/Poppins-${font}.ttf");
+        src: url("/fonts/Poppins/Poppins-${font}.ttf");
         font-family: Poppins-${font};
     }
 

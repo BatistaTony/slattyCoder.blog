@@ -6,11 +6,13 @@ import PageLayout from '../../layout'
 import { articles } from '../../services/articles'
 import { ArticleType } from '../../types/article'
 import { ListArticles, PageContainerStyled } from './styles'
+import { useRouter } from 'next/router'
 
 function PageHome() {
 	const [pageSize, setPageSize] = useState(10)
 	const [totalItems, setTotalItems] = useState(25)
 	const [currentPage, setCurrentPage] = useState(1)
+	const router = useRouter()
 
 	const onChangePage = page => {
 		setCurrentPage(page)
@@ -22,7 +24,11 @@ function PageHome() {
 			<PageContainerStyled>
 				<ListArticles>
 					{articles.map(article => (
-						<ArticleCard article={article} key={article.id} />
+						<ArticleCard
+							article={article}
+							key={article.id}
+							onRedirect={id => router.push(`/article/${id}`)}
+						/>
 					))}
 				</ListArticles>
 				<Pagination

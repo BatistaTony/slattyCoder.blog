@@ -18,11 +18,12 @@ import {
 
 interface ArticleCardProps {
 	article: ArticleType
+	onRedirect?: (id: string | number) => void
 }
 
-const ArticleCard = ({ article }: ArticleCardProps) => {
+const ArticleCard = ({ article, onRedirect }: ArticleCardProps) => {
 	return (
-		<ArticleCardStyled>
+		<ArticleCardStyled onClick={() => onRedirect(article.id)}>
 			<ArticleHeader>
 				<AuthorAvatar url={article.author.cover} />
 				<AuthorName>{article.author.name}</AuthorName>
