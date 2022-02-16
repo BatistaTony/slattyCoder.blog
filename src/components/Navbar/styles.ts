@@ -16,13 +16,14 @@ export const NavbarStyled = styled.div<NavbarStyledProps>`
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
 `
 
 export const Logo = styled.div`
 	width: 100px;
 	height: 30px;
+	cursor: pointer;
 
 	h1 {
 		color: ${props => props.theme.colors.primaryText};
