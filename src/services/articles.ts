@@ -1,6 +1,7 @@
 //TODO GET ARTICLES FUNC
 
 import { ArticleType } from '../types/article'
+import { notionClient } from './notion'
 
 export const articles: ArticleType[] = [
 	{
@@ -18,3 +19,13 @@ export const articles: ArticleType[] = [
 		tool: 'Reactjs',
 	},
 ]
+
+export const getArticles = async dbId => {
+	const resp = await notionClient.databases.query({
+		database_id: process.env.NEXT_PUBLIC_API_NOTION_DB_ID,
+	})
+
+	console.log(resp)
+
+	return resp.results
+}
